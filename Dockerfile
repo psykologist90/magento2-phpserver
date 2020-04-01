@@ -25,7 +25,8 @@ RUN \
   autoconf \
   libbz2-dev \
   libltdl-dev \
-  libpng12-dev \
+  libpng-dev \
+  libpng16-16 \
   libjpeg62-turbo-dev \
   libfreetype6-dev \
   libxpm-dev \
