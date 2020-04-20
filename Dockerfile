@@ -34,10 +34,8 @@ RUN \
   libicu-dev \
   libmcrypt-dev \
   libxslt1-dev \
-
   re2c \
   libpng++-dev \
-  libpng3 \
   libvpx-dev \
   zlib1g-dev \
   libgd-dev \
@@ -54,6 +52,9 @@ RUN \
   libzip-dev \
   libzip4
 
+RUN pecl install mcrypt-1.0.3
+RUN docker-php-ext-enable mcrypt
+
 # http://devdocs.magento.com/guides/v2.0/install-gde/system-requirements.html
 RUN \
     /usr/local/bin/docker-php-ext-install \
@@ -62,7 +63,6 @@ RUN \
     pdo_mysql \
     mysqli \
     mbstring \
-    mcrypt \
     hash \
     simplexml \
     xsl \
